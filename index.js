@@ -1,8 +1,16 @@
 // 1 teste
+const spans = document.querySelectorAll("#firstExamples span");
+const firstTestInput = document.getElementById("firstTestInput");
+
+spans.forEach((span) => {
+  span.addEventListener("click", () => {
+    firstTestInput.value = span.innerHTML;
+  });
+});
+
 const firstTestButton = document.getElementById("firstTestButton");
 
 firstTestButton.addEventListener("click", () => {
-  const firstTestInput = document.getElementById("firstTestInput");
   const address = firstTestInput.value.split(" ");
 
   const firstTestP = document.getElementById("firstTestP");
@@ -10,10 +18,18 @@ firstTestButton.addEventListener("click", () => {
 });
 
 // 2 teste
+const secondSpans = document.querySelectorAll("#secondExamples span");
+const secondTestInput = document.getElementById("secondTestInput");
+
+secondSpans.forEach((span) => {
+  span.addEventListener("click", () => {
+    secondTestInput.value = span.innerHTML;
+  });
+});
+
 const secondTestButton = document.getElementById("secondTestButton");
 
 secondTestButton.addEventListener("click", () => {
-  const secondTestInput = document.getElementById("secondTestInput");
   const arrayAddress = secondTestInput.value.split(" ");
 
   let street = "";
@@ -33,6 +49,15 @@ secondTestButton.addEventListener("click", () => {
 });
 
 // 3 teste
+const thirdSpans = document.querySelectorAll("#thirdExamples span");
+const thirdTestInput = document.getElementById("thirdTestInput");
+
+thirdSpans.forEach((span) => {
+  span.addEventListener("click", () => {
+    thirdTestInput.value = span.innerHTML;
+  });
+});
+
 const separateAddress = (address) => {
   let arrayAddress = address.split(", ");
 
@@ -73,7 +98,6 @@ const separateAddress = (address) => {
 const thirdTestButton = document.getElementById("thirdTestButton");
 
 thirdTestButton.addEventListener("click", () => {
-  const thirdTestInput = document.getElementById("thirdTestInput");
   const address = separateAddress(thirdTestInput.value);
 
   const thirdTestP = document.getElementById("thirdTestP");

@@ -1,0 +1,22 @@
+.divExamples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+h4 {
+  width: 100%;
+  margin: 0;
+}
+
+span {
+  cursor: pointer;
+  padding: 5px;
+  background-color: lavender;
+  border-radius: 11px;
+}
+
+span:hover {
+  background-color: lightblue;
+}
